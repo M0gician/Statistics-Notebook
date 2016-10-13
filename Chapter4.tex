@@ -1,0 +1,142 @@
+\documentclass[Main.tex]{subfiles}
+
+\begin{document}
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%
+	%	CHAPTER
+	%
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\chapter{Designing Studies}
+	
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Sampling and Surveys}\index{Sampling and Surveys}
+	
+	\begin{example}[Population, census,and sample]\index{Population, census,and sample} \hfill \\
+		\begin{itemize}
+			\item The \textbf{population} in a statistical study is the entire group of individuals we want information about.\\
+			\item A \textbf{census} collect data from every individual in the population.\\
+			\item A \textbf{sample} is a subset of individuals in the population from which we actually collect data.\\
+			\item A \textbf{survey} (sample survey) is used to infer statistics of a population.
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[How to Sample Badly]\index{How to Sample Badly} \hfill \\
+		\begin{itemize}
+			\item \textbf{Convenience sample} is to choose individuals from the population who are easy to reach results.\\
+			\item A design of a statistical study with \textbf{bias} would consistently underestimate or consistently overestimate the value you want to know.\\
+			\item A \textbf{voluntary response sample} consist of people who choose themselves by responding to a general invitation.
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[How to Sample Well]\index{How to Sample Well} \hfill \\
+		\begin{itemize}
+			\item \textbf{Random sampling} involves using a chance process to determine which members of a population are included in the sample.\\
+			\item A \textbf{simple random sample} (SRS) of size $n$ is chosen in such a way that every group of $n$ individuals in the population has an equal chance to be selected as the sample.
+		\end{itemize}
+	\end{example} \newpage
+	
+	\begin{example}[Other Random Sampling Methods]\index{Other Random Sampling Methods} \hfill \\
+		\begin{itemize}				
+			\item To get a \textbf{stratified random sample}, start by classifying the population into groups of similar individuals, called \textbf{strata}. Then choose a separate SRS in each stratum and combine these SRSs to form the sample.\\
+			\item To get a \textbf{cluster sample}, start by classifying the population into groups of individuals taht are located near each other, called \textbf{clusters}. Then choose an SRS of the clusters. All individuals in the chosen clusters are included in the sample.
+		\end{itemize}
+	\end{example}	
+	
+	\begin{example}[Sample Surveys: What Can Go Wrong?]\index{Sample Surveys: What Can Go Wrong?} \hfill \\
+		\begin{itemize}	
+			\item \textbf{Undercoverage} occurs whens one members of the population cannot be chosen in a sample.\\
+			\item \textbf{Nonresponse} occurs when an individual chosen for the sample can't be contacted or refuses to participated.\hfill 
+			\begin{subequations}
+				\begin{align}
+				\underbrace{\text{Incorrect answers}\Longrightarrow\text{Response bias}}_{\text{\large \textbf{Wording of questions} has a big influence on the answer.}} \notag
+				\end{align}
+			\end{subequations}\hfill			
+		\end{itemize}
+	\end{example}			
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Experiments}\index{Experiments}
+	
+	\begin{exercise}[Observational Study VS Experiment]\index{Observational Study VS Experiment} \hfill \\
+		\begin{itemize}	
+			\item An \textbf{observational study} observes individuals and measures variables of interest but does not attempt to influence the response.\\
+			\item An \textbf{experiment} deliberately imposes some treatment on individuals to measure their responses.\\
+			\item \textbf{Confounding} occurs when two variables are associated in such a way that their effects on a response variable cannot be distinguished from each other.
+		\end{itemize}
+	\end{exercise}
+	
+	\begin{exercise}[The Language of Experiments]\index{The Language of Experiments} \hfill \\
+		\begin{itemize}	
+			\item \textbf{Treatment} is the condition applied to subjects in an experiment.\\
+			\item The \textbf{experimental units} are the smallest collection of individuals to which treatments are applied. When they are human beings, they often are called \textbf{subjects}.
+		\end{itemize}
+	\end{exercise} \newpage
+	
+	\begin{exercise}[How to Experiment Badly]\index{How to Experiment Badly} \hfill \\
+		\begin{itemize}
+			\item In an experiment, \textbf{random assignment} means that experimental units are assigned to treatments using a chance process.\hfill \\
+
+			\textbf{Principles of Experimental Design:}			
+			\begin{subequations}			
+				\begin{align}
+				\text{A well experiment}				
+				\begin{cases}
+				\text{\textbf{Must} make a \fbox{comparison} between treatments.}\\
+				\text{\textbf{Must} \underline{randomly assign} subjects to treatments.}\\				
+				\text{\textbf{Must} \underline{control} all other variables that affect the resp-}\\ \text{onse to be the same for all groups.}\\
+				\text{\textbf{Must} slect enough subjects $\Longrightarrow$ \fbox{replication}.}\\
+				\end{cases}
+				\end{align}
+			\end{subequations}
+			
+			A good control minimizes confounding and reduces variability in the response.
+		\end{itemize}
+	\end{exercise}	
+	
+	\begin{exercise}[Completely Randomized Designs]\index{Completely Randomized Designs} \hfill \\
+		\begin{itemize}	
+			\item In a \textbf{completely randomized design}, the experimental units are assigned to the treatments completely by chance.\\
+			\textbf{All experiments need a control} (no treatment or \underline{placebo} group)
+		\end{itemize}
+	\end{exercise}	
+			
+	\begin{exercise}[Experiments: What Can Go Wrong?]\index{Experiments: What Can Go Wrong?} \hfill \\
+		\begin{itemize}					
+			\item In a \textbf{double-blind} experiment, neither the subjects nor those who interact with them and measure the response variable know which treatment a subject received.\\
+			If one party knows and the other doesn't, then the experiment is \textbf{single-blind}.
+		\end{itemize}
+	\end{exercise}	
+	
+	\begin{exercise}[Inference for Experiments]\index{Inference for Experiments} \hfill \\
+		\begin{itemize}				
+			\item \textbf{Statistically significant} is an observed effect so large that it would rarely occur by chance.  
+		\end{itemize}
+	\end{exercise}	
+	
+	\begin{exercise}[Blocking]\index{Blocking} \hfill \medskip
+		\begin{itemize}	
+			\item A \textbf{block} is a group of experimental units that are known before the experiment to be similar in some way that is expected to affect the response to the treatments.\\
+			\item In a \textbf{randomized block design}, the random assignment of experimental units to treatments is carried out separately within each block.
+		\end{itemize}
+	\end{exercise}
+														
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+		
+	\section{Using Studies Wisely}\index{Using Studies Wisely}
+	
+	\begin{example}[Inference about a population]\index{Inference about a population} \hfill \\
+		\begin{itemize}	
+			\item \textbf{Inference about a population} requires that the individuals taking part in a study be randomly selected from the population. A well-designed experiment that randomly assigns experimental units to treatments allows \textbf{inference about cause and effect}.\\
+			\item \textbf{Lack of realism} in an experiment can prevent us from generalizing its results.\\
+			\item Any information about the individuals in the study must be kept \textbf{confidential}
+		\end{itemize}
+	\end{example}				
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass[Main.tex]{subfiles}
+
+\begin{document}
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%
+	%	CHAPTER
+	%
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\chapter{Probability}
+	
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Randomness, Probability, and Simulation}\index{Randomness, Probability, and Simulation}
+	
+	\begin{exercise}[The Idea of Probability]\index{The Idea of Probability} \hfill \\
+		\begin{itemize}	
+			\item \textbf{The Law of Large Numbers} says that the proportion of times that a particular outcome occurs in many repetitions will approach a single number, which is the \textbf{possibility}.\\			
+			\item \textbf{Probability} is a number between $0$ and $1$ describing the proportion of the time the outcome would occur over the long run.
+		\end{itemize}
+	\end{exercise}	
+	
+	\begin{exercise}[Simulation]\index{Simulation} \hfill \\
+		\begin{itemize}	
+			\item A \textbf{simulation} is an imitation of chance behavior, most often carried out with random number.\hfill \\
+			
+			\textbf{Four-step process of simulation:}
+			\begin{subequations}
+				\begin{align}
+				\text{Simulation}
+				\begin{cases}
+				\text{\textbf{State}: Ask a question of intertest about some chance process.}\\
+				\text{\textbf{Plan}: Describe one repetition of process.}\\
+				\text{\textbf{Do}: Perform many repetitions of the simulation.}\\
+				\text{\textbf{Conclude}: Use the results of your simulation to answer the}\\\text{question of interest.}\\
+				\end{cases}
+				\end{align}
+			\end{subequations}
+		\end{itemize}
+	\end{exercise}									
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Probability Rules}\index{Probability Rules}
+	
+	\begin{example}[Probability Models]\index{Probability Models} \hfill \\
+		\begin{itemize}	
+			\item The \textbf{sample space \emph{S}} of chance process is the set of all possible outcomes.\\
+			\item A \textbf{probability model} is a description of some chance process that consists of two parts: a sample space \emph{S} and a probability for each outcome.\\
+			\item An \textbf{event} is any collection of outcomes from some chance process.
+		\end{itemize}
+	\end{example}	
+	
+	\begin{example}[Basic Rules of Probability]\index{Basic Rules of Probability} \hfill \\
+		\begin{itemize}	
+			\item For any event $A$, $0\leqslant P(A)\leqslant1$\\
+			\item If \emph{S} is the sample space in a probability model, $P(S)=1$.\\
+			\item $P(A)=\dfrac{\text{number of outcomes corresponding to event A}}{\text{total number of outcomes in sample space}}$\\
+			\item \textbf{Complement rule}: $P(A^{\prime})=1-P(A)\qquad P(A)=P(A\cap B)+P(A\cap B^{\prime}).$\\
+			\item \textbf{Mutually exclusive} (disjoint): two events $A$ and $B$ have no outcomes in common and so can never occur together--that is, if $P(A\cap B)=0$.\\
+			In other words:	$P(A\cup B)=P(A)+P(B)$.
+		\end{itemize}
+	\end{example}	
+	
+	\begin{example}[General Addition Rule For Two Events]\index{General Addition Rule For Two Events} \hfill \\
+		\begin{itemize}	
+			\item If $A$ and $B$ are any two events resulting from some chance process, the
+			\begin{definition}[General Addition Rule For Two Events]\index{General Addition Rule For Two Events}
+			\begin{subequations}
+				\begin{align}
+				P(A\cup B)=P(A)+P(B)-P(A\cap B)	
+				\end{align}
+			\end{subequations}
+			\end{definition}\hfill									
+		\end{itemize}
+	\end{example}	
+										
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Conditional Probability and Independence}\index{Conditional Probability and Independence}
+	
+	\begin{exercise}[Conditional Probability]\index{Conditional Probability} \hfill \\
+		\begin{itemize}	
+			\item \textbf{Conditional Probability} is the possibility that one event happens given that another event is already known to have happened.
+			Suppose wen know that event $A$ has happened. Then the probability that event $B$ happens given that event $A$ has happened is denoted by $P(B|A)$.		
+		\end{itemize}
+	\end{exercise}
+	
+	\begin{exercise}[Calculation Conditional Probabilities]\index{Calculation Conditional Probabilities} \hfill \\
+		\begin{itemize}	
+			\item To find the conditional probability $P(A|B)$, use formula
+			\begin{subequations}
+				\begin{align}
+				P(A|B)=\frac{P(A\cap B)}{P(B)}
+				\end{align}
+			\end{subequations}	
+			\item The conditional probability $P(B|A)$ is given by
+			\begin{subequations}
+				\begin{align}
+				P(B|A)=\frac{P(B\cap A)}{P(A)}
+				\end{align}
+			\end{subequations}		
+		\end{itemize}
+	\end{exercise}
+	
+	\begin{exercise}[General Multiplication Rule]\index{General Multiplication Rule} \hfill \\
+		\begin{itemize}	
+			\item The probability that event $A$ and$B$ both occur can be found using the \textbf{General Multiplication Rule}
+			\begin{subequations}
+				\begin{align}
+				P(A\cap B)=P(A)\cdot P(B|A)
+				\end{align}
+			\end{subequations}	
+			where $P(B|A)$ is the conditional probability taht event $B$ occurs given that event $A$ has already occurred.		
+		\end{itemize}
+	\end{exercise}	
+	
+	\begin{exercise}[Independent events]\index{Independent events} \hfill \\
+		\begin{itemize}	
+			\item When events $A$ and $B$ are \textbf{independent}:
+			\begin{subequations}
+				\begin{align}
+				P(A|B)=P(A)\quad\text{and}\quad P(B|A)=P(B)
+				\end{align}
+			\end{subequations}	
+			where $P(B|A)$ is the conditional probability that event $B$ occurs given that event $A$ has already occurred.\\
+			\begin{definition}[Multiplication rule for independent events]\index{Multiplication rule for independent events}
+			\begin{subequations}
+				\begin{align}
+				P(A\cap B)=P(A)\cdot P(B)
+				\end{align}
+			\end{subequations}	
+			\end{definition} \hfill					
+		\end{itemize}
+	\end{exercise}								
+\end{document}

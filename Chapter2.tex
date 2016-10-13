@@ -1,0 +1,130 @@
+\documentclass[Main.tex]{subfiles}
+
+\begin{document}
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%
+	%	CHAPTER
+	%
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\chapter{Modeling Distributions of Data}
+	
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Describing Location in a Distribution}\index{Describing Location in a Distribution}
+	
+	\begin{example}[Measuring Positions]\index{Measuring Positions} \hfill \\
+			
+		\begin{itemize}
+			\item \textbf{Percentile}: the \textbf{{\emph{p}th percentile}} of a distribution is the value with \emph{p} \textbf{percent} of the observations less than it.\\
+								
+			\item \textbf{Standardized Score} ($\mathbb{Z}$-Score): if $x$ is an observation from a distribution that has known mean and standard deviation, the \textbf{standardized score} for $x$ is 
+				
+				\begin{definition}[Normal Distribution]\index{Normal Distribution}				
+				\begin{subequations}
+					\begin{align}
+					\mathbb{Z}=\frac{x_{i}-\mu}{\sigma}
+					\end{align}
+				\end{subequations}
+				\end{definition}\hfill 
+			
+			\item A \textbf{cumulative relative frequency graph} allows us to examine location within a distribution, beginning by grouping the observations into \underline{equal-width classes}. \\
+			
+			\item For a common \textbf{transform data} like changing units of measurement:
+		\end{itemize}
+					
+				\begin{subequations}
+					\begin{align}
+					\text{\textbf{Add} a constant $a$}
+						\begin{cases}
+						 \text{\textbf{Median, mean, quartiles, and percentiles}$\Longrightarrow$ \underline{increase} by $a$.} \\
+						 \text{\textbf{Spread}$\Longrightarrow$ do not change.}
+						 \end{cases}
+					 \end{align}
+				 \end{subequations}			 
+				 \begin{subequations}
+				 	\begin{align}
+				 		\text{\textbf{Multiply} a constant $b$}
+				 		\begin{cases}
+				 			\text{\textbf{Median, mean, quartiles, percentiles}$\Longrightarrow$ \underline{multiply} by $b$.} \\
+				 			\text{\textbf{Spread}$\Longrightarrow$ also \underline{multiply} by $b$.}
+				 		\end{cases}
+				 	\end{align}
+				 \end{subequations}
+		
+		\begin{itemize}	
+			\item \textbf{Neither} of these transformations changes the shape of the distribution.
+		\end{itemize}\hfill 
+	\end{example}
+	\newpage
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Density Curves and Normal Distributions}\index{Density Curves and Normal Distributions}
+	
+	\begin{exercise}[Density Curves]\index{Density Curves} \hfill \\
+		
+		\begin{itemize}
+			\item A \textbf{density curve} is that			
+			\begin{subequations}
+			\begin{align}
+				\begin{cases}
+					\text{is always on or above the horizontal axis, and}\\
+					\text{has area exactly 1 underneath it.}
+				\end{cases}
+			\end{align}
+			\end{subequations}
+		\end{itemize}	
+	\end{exercise}
+		
+	\begin{exercise}[Normal Distribution]\index{Normal Distribution} \hfill \\
+		\begin{itemize}
+			\item A \textbf{Normal Distribution} is described by a Normal density curve.\\ The \textbf{mean} of a Normal distribution $\mu$ is at the center of the symmetric \textbf{Normal curve}.\\ The \textbf{standard deviation} $\sigma$ is the distance from the center to the change-of-curvature points on either side.\\
+			
+			\item We \textbf{abbreviate} the Normal distribution with mean $\mu$ and standard deviation $\sigma$ as $N(\mu,\sigma)$.
+			
+			\begin{definition}[Normal Distribution]\index{Normal Distribution}			
+			\begin{subequations}
+				\begin{align}
+				f(x|\mu,\sigma)=\frac{1}{\sigma\sqrt{2\pi}}e^{-\frac{(x-\mu)^{2}}{2\sigma^{2}}}
+				\end{align}
+			\end{subequations}	
+			\end{definition}\hfill 
+
+			\item \textbf{The 68-95-99.7 rule}:\hfill 
+			
+			For a Normal distribution with mean $\mu$ and standard deviation $\sigma$:\\
+			\textbf{68\%} of the observations fall within $\sigma$ of the mean $\mu$.\\
+			\textbf{95\%} of the observations fall within 2$\sigma$ of the mean $\mu$.\\
+			\textbf{99.7\%} of the observations fall within 3$\sigma$ of the mean $\mu$.
+			
+			\begin{definition}[The 68-95-99.7 rule]\index{The 68-95-99.7 rule}	
+				\begin{subequations}
+					\begin{align}
+					\text{Three Sigma}
+					\begin{cases}
+					\int^{1}_{-1}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^{2}}\mathrm{d}x=\mathbf{68.2}\textbf{\%}\quad\text{(within 1 SD)}\\ \\
+					\int^{2}_{-2}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^{2}}\mathrm{d}x=\mathbf{95.4}\textbf{\%}\quad \text{(within 2 SD)}\\ \\
+					\int^{3}_{-3}\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^{2}}\mathrm{d}x=\mathbf{99.7}\textbf{\%}\quad\text{(within 3 SD)}
+					\end{cases}
+					\end{align}
+				\end{subequations}	
+			\end{definition}\hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\ \hfill \\
+			
+			\item The \textbf{standard Noraml distribution} is the Normal distribution with mean 0 and standard deviation 1.
+			
+			\begin{definition}[Standard Normal Distribution]\index{Normal Distribution}			
+				\begin{subequations}
+					\begin{align}
+					\mathbb{Z}=\frac{x_{i}-\mu}{\sigma}\Rightarrow\text{Standar}&\text{dization}=\frac{\text{Obs}-\text{Mean}}{\text{SD}}\\
+					\mathit{f}(x|0,1)&=\frac{1}{\sqrt{2\pi}}e^{-\frac{1}{2}x^{2}} \\
+					\int^{\infty}_{-\infty}\frac{1}{\sqrt{2\pi}}&e^{-\frac{1}{2}x^{2}}\mathrm{d}x=1 
+					\end{align}
+				\end{subequations}	
+			\end{definition}\hfill														
+		\end{itemize}
+	\end{exercise}
+\end{document}

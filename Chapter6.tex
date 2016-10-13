@@ -1,0 +1,278 @@
+\documentclass[Main.tex]{subfiles}
+
+\begin{document}
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%
+	%	CHAPTER
+	%
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\chapter{Random Variables}
+	
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Discrete and Continuous Random Variables}\index{Discrete abnd Continuous Random Variables}
+	
+	\begin{example}[Random variable and probability distribution]\index{Random variable and probability distribution} \hfill \\
+		\begin{itemize}	
+			\item A \textbf{random variable} takes numerical values that describe the outcomes of some chance process.\\
+			\item The \textbf{probability distribution} of a random variable gives its possible values and their probability.
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[Discrete Random Variables]\index{Discrete Random Variables} \hfill \\
+		\begin{itemize}	
+			\item A \textbf{Discrete random variable} $X$ takes a \textbf{fixed} set of possible values with gaps between. The probability distribution of a discrete random variable $X$ lists the values $x_{i}$ and their probabilities $p_{i}$:			
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{lcccr}
+					\hline
+					\textbf{Value:} & $x_{1}$ & $x_{2}$ & $x_{3}$ & $\cdots$ \\
+					\textbf{Probability:} & $p_{1}$ & $p_{2}$ & $p_{3}$ & $\cdots$ \\
+					\hline
+				\end{tabular}
+			\end{table}
+			The probabilities $p_{i}$ must satisfy two requirements:\\			
+			\begin{itemize}
+				\item Every probability $p_{i}$ is a number between $0$ and $1$.\\
+				\item The sum of the probabilities is $1$: $p_{1}+p_{2}+p_{3}+\cdots +p_{n}=1$	
+			\end{itemize}							
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[Mean (Expected Value) of a Discrete Random Variable]\index{Mean (Expected Value) of a Discrete Random Variable} \hfill \\
+		\begin{itemize}				
+			\item Suppose that $X$ is a discrete random variable with probability distribution\hfill			 		
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{lcccr}
+					\hline
+					\textbf{Value:} & $x_{1}$ & $x_{2}$ & $x_{3}$ & $\cdots$ \\
+					\textbf{Probability:} & $p_{1}$ & $p_{2}$ & $p_{3}$ & $\cdots$ \\
+					\hline
+				\end{tabular}
+			\end{table}
+			To find the \textbf{mean (expected value)} of $X$, multiply each possible value by its probability, the add all the products:\hfill \\ \hfill \\ \hfill \\ \hfill \\
+			\begin{definition}[Mean (Expected Value)]\index{Mean (Expected Value)}
+			\begin{subequations}
+				\begin{align}
+				\mu_{x}=E(X)&=x_{1}p_{1}+x_{2}p_{2}+x_{3}p_{3}+\cdots\\
+				&=\sum x_{i}p_{i} \notag
+				\end{align}
+			\end{subequations}	
+			\end{definition}\hfill			
+		\end{itemize}
+	\end{example}		
+		
+	\begin{example}[Variance and standard deviation of a discrete random variable]\index{Variance and standard deviation of a discrete random variable} \hfill \\
+		\begin{itemize}				
+			\item Suppose that $X$ is a discrete random variable with probability distribution\hfill			 		
+			\begin{table}[H]
+				\centering
+				\begin{tabular}{lcccr}
+					\hline
+					\textbf{Value:} & $x_{1}$ & $x_{2}$ & $x_{3}$ & $\cdots$ \\
+					\textbf{Probability:} & $p_{1}$ & $p_{2}$ & $p_{3}$ & $\cdots$ \\
+					\hline
+				\end{tabular}
+			\end{table}
+			and that $\mu_{x}$ is the mean of $X$. The \textbf{variance} of $X$ is\hfill
+			\begin{definition}[Variance of a discrete random variable]\index{Variance of a discrete random variable}
+				\begin{subequations}
+					\begin{align}
+					\mathrm{Var(\mathit{X})}=\sigma^{2}_{x}&=(x_{1}-\mu_{x})^{2}p_{1}+(x_{2}-\mu_{x})^{2}p_{2}+(x_{3}-\mu_{x})^{2}p_{3}+\cdots\\
+					&=\sum(x_{i}-\mu_{x})^{2}p_{i} \notag
+					\end{align}
+				\end{subequations}	
+			\end{definition}\hfill
+				
+			The \textbf{standard deviation} of $X$, $\sigma_{x}$, is the square root of the variance.
+			\begin{definition}[Standard deviation of a discrete random variable]\index{Standard deviation of a discrete random variable}
+				\begin{subequations}
+					\begin{align}
+					\sigma_{x}=\sqrt{\sum(x_{i}-\mu_{x})^{2}p_{i}}
+					\end{align}
+				\end{subequations}	
+			\end{definition}\hfill					
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[Continuous Random Variables]\index{Continuous Random Variables} \hfill \\
+		\begin{itemize}	
+			\item A \textbf{Continuous random variable} $X$ takes all values in an interval of numbers. The probability distribution of $X$ is described by a density curve. 
+		\end{itemize}
+	\end{example} \newpage																
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Transforming and Combining Random Variables}\index{Transforming and Combining Random Variables}
+	
+	\begin{exercise}[Linear Transformations]\index{Linear Transformations} \hfill \\
+		\begin{itemize}
+			\item Adding (or subtracting) each value of a random variable by a positive number $a$:\hfill
+			\begin{definition}[Effect On A Random Variable of Adding (or subtracting) by A Constant]\index{[Effect On A Random Variable of Adding (or subtracting) by A Constant}\hfill
+				\begin{subequations}
+					\begin{itemize}
+						\item \text{Mean, Medeian, Quartiles, and percentiles $+$ ($-$) $a$}\\
+						\item \text{Does not change Range, IQR, Standard deviation}
+					\end{itemize}
+				\end{subequations}	
+			\end{definition}\hfill
+										
+			\item Multiplying (or dividing) each value of a random variable by a positive number $b$:\hfill
+			\begin{definition}[Effect On A Random Variable of Multiplying (or Dividing) by A Constant]\index{Effect On A Random Variable of Multiplying (or Dividing) by A Constant}\hfill
+				\begin{subequations}
+						\begin{itemize}
+						\item \text{Mean, Medeian, Quartiles, and percentiles $\times$ ($\div$) $b$}\\
+						\item \text{Range, IQR, and Standard deviation $\times$ ($\div$) $b$}\\
+						\item \text{Does not change the slop of the distribution}
+						\end{itemize}
+				\end{subequations}	
+			\end{definition}\hfill				
+		\end{itemize}
+	\end{exercise}
+	
+	\begin{exercise}[Combining Random Variables]\index{Combining Random Variables} \hfill \\
+		\begin{itemize}	
+			\item Mean of the Sum of Random Variables:
+			\begin{subequations}
+				\begin{align}
+				E(T)=\mu_{T}=\mu_{x}+\mu_{y}
+				\end{align}
+			\end{subequations}\hfill			
+			\item Range of the Sum of Random Variables:
+			\begin{subequations}
+				\begin{align}
+				\text{range of $T$}=\text{range of $X$}+\text{range of $Y$}
+				\end{align}
+			\end{subequations}\hfill
+			\item Variance of the Sum of Random Variables:
+			\begin{subequations}
+				\begin{align}
+				\sigma^{2}_{T}=\sigma^{2}_{X}+\sigma^{2}_{Y}
+				\end{align}
+			\end{subequations}\hfill
+			\item Mean of the Difference of Random Variables:
+			\begin{subequations}
+				\begin{align}
+				\mu_{D}=E(D)=\mu_{x}-\mu_{y}
+				\end{align}
+			\end{subequations}\hfill
+			\item Variance of the Difference of Random Variables:
+			\begin{subequations}
+				\begin{align}
+				\sigma^{2}_{D}=\sigma^{2}_{X}+\sigma^{2}_{Y}
+				\end{align}
+			\end{subequations}\hfill						
+		\end{itemize}
+	\end{exercise}	
+							
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	%	SECTION:
+	%-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+	
+	\section{Binomial and Geometric Random Variables}\index{Binomial and Geometric Random Variables}
+	
+	\begin{example}[Binomial Settings and Binomial Random Variables]\index{Binomial Settings and Binomial Random Variables} \hfill \\
+		\begin{itemize}
+			\item A \textbf{Binomial setting} consists of $n$ independent trials of the same chance process, each resulting in a success or a failure, with probability of success $p$ on each trail.\hfill
+			\begin{subequations}
+				\begin{align}
+				\text{\textbf{BINS}}
+				\begin{cases}
+				\text{Trails can be classified as ``success'' or ``failure.''}\\
+				\text{Trails must be independent.}\\
+				\text{The number of trails $n$ must be fixed.}\\
+				\text{There is the same probabilty $p$ of success on each trail.} \notag
+				\end{cases}
+				\end{align}
+			\end{subequations}\hfill
+			
+			\item The count $X$ of successes is a \textbf{Binomial Random Variable}. Its probability distribution is a \textbf{Binomial Distribution}.
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[Binomial Probabilities]\index{Binomial Probabilities} \hfill \\
+		\begin{itemize}	
+			\item The \textbf{Binomial Coefficient}\hfill
+			\begin{definition}[Binomial Coefficient]\index{Binomial Coefficient}\hfill
+				\begin{subequations}
+					\begin{align}
+					\binom{n}{k} =\frac{n!}{k!(n-k)!}
+					\end{align}
+				\end{subequations}\hfill	
+			\end{definition}
+			counts the number of ways $k$ successes can be arranged among $n$ trails. The \textbf{factorial} of $n$ is\hfill
+				\begin{subequations}
+					\begin{align}
+					n!=n(n-1)(n-2)\cdots (3)(2)(1)
+					\end{align}
+				\end{subequations}	
+			for positive whole numbers $n$, and $0!=1$\hfill \\
+			\item \textbf{Binomial Probability Formula}
+			\begin{definition}[Binomial Probability]\index{Binomial Probability}\hfill
+				\begin{subequations}
+					\begin{align}
+					P(X=K)=\binom{n}{k}p^{k}(1-p)^{n-k}
+					\end{align}
+				\end{subequations}\hfill	
+			\end{definition}
+			If a count $X$ of successes has the binomial distribution with number of trials $n$ and probability of success $p$, the \textbf{mean} and \textbf{standard deviation} of $X$ are	
+			\begin{definition}[Mean and Standard deviation of Binomial distribution]\index{[Mean and Standard deviation of Binomial distribution}\hfill
+				\begin{subequations}
+					\begin{align}
+					\mu_{x}&=np\\
+					\sigma_{x}&=\sqrt{np(1-p)}
+					\end{align}
+				\end{subequations}\hfill	
+			\end{definition}												
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[Binomial Distributions in Statistical Sampling]\index{Binomial Distributions in Statistical Sampling} \hfill \\
+		\begin{itemize}	
+			\item \textbf{10\% Condition} \hfill \\
+			When taking an simple random sample of size $n$ from a population of size $N$, we can use a binomial distribution to model the count of successes in the sample as long as $n\leq\frac{1}{10}N$.\hfill \\
+			\item \textbf{The Large Counts Condition}\hfill \\
+			Suppose that a count $X$ of successes has the binomial distribution with $n$ trails and success probability $p$. When $n$ is large, the distribution of $X$ is approximately Normal with\hfill 
+				\begin{subequations}
+					\begin{align}
+						\text{mean: $\mu_{x}=np$ and standard deviaion: $\sigma_{X}=\sqrt{np(1-p)}$}
+					\end{align}
+				\end{subequations}
+			As an approximation, we will use the Normal approximation when$n$ is no longer that
+				\begin{subequations}
+					\begin{align}
+					np\geq 10\qquad\text{and}\qquad n(1-p)\geq 10
+					\end{align}
+				\end{subequations}
+			That is, the expected number of \textbf{successes} and \textbf{failures} are both at \textbf{least 10}. We refer to this as the \textbf{Large Counts condition}.					
+		\end{itemize}
+	\end{example}
+	
+	\begin{example}[Geometric Random Variables]\index{Geometric Random Variables} \hfill \\
+		\begin{itemize}	
+			\item A \textbf{Geometric setting} consists of repeated trails of the same chance process in which the probability $p$ of successes is the same on each trail, and the goal is to count the number of trails it takes to get one success.\hfill \\
+			\item If $Y=$ the number of trails required to obtain the first success, then $Y$ is a \textbf{Geometric probability} that $Y$ takes any value is
+			\begin{definition}[Geometric Probability]\index{Geometric Probability}\hfill
+				\begin{subequations}
+					\begin{align}
+					P(Y=K)=(1-p)^{k-1}p
+					\end{align}
+				\end{subequations}\hfill	
+			\end{definition}
+			The \textbf{mean} (expected value) of a geometric random variable $Y$ is
+			\begin{definition}[Mean of Geometric Probability]\index{Mean of Geometric Probability}\hfill
+				\begin{subequations}
+					\begin{align}
+					\mu_{Y}=E(Y)=\frac{1}{p}
+					\end{align}
+				\end{subequations}\hfill	
+			\end{definition}
+			which is the expected number of trails required to get the first success.						
+		\end{itemize}
+	\end{example}															
+\end{document}
